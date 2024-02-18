@@ -1,30 +1,25 @@
-﻿using Microsoft.Data.Sqlite;
+var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
 
-const string DatabaseConnString = "Data Source=../../../../../../Database/db_v1.db";
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-using (var connection = new SqliteConnection(DatabaseConnString))
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    Console.WriteLine("The accounts in database are");
-
-    connection.Open();
-
-    var command = connection.CreateCommand();
-    command.CommandText =
-    @"
-        SELECT *
-        FROM Accounts
-    ";
-
-    using (var reader = command.ExecuteReader())
-    {
-        while (reader.Read())
-        {
-            var id = reader.GetString(0);
-            var username = reader.GetString(1);
-            var password = reader.GetString(2);
-
-            Console.WriteLine($"{id} {username} {password}");
-        }
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
