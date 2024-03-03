@@ -37,5 +37,34 @@ namespace Server_v1.Controllers
                 return list;
             }
         }
+
+        [HttpPost(Name = "SignIn")]
+        public Boolean Post(Account a)
+        {
+            using (var connection = new SqliteConnection(DatabaseConnString))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText = "SELECT Password FROM Accounts where Username = '" + a.username + "' and Password = '" + a.password + "'";
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+        //destructive payload
+        /*        {
+          "id": 0,
+          "username": "a",
+          "password": "a' or 1=1--"
+        }*/
+
     }
 }
