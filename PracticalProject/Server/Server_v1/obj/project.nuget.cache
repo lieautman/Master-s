@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fTx9YKiIscYODj0stodKQiyqX1kcJQrQeE6FdJba6RFGfVKz21evXFX8V4iI623wnJfYgTGT3Q15SmEY7yS/Rw==",
+  "dgSpecHash": "l00t5uS+To/16n3RxeZob6tKfrD/eY/oaYscb4JuKOxioz9cNgkz6lPH8S/+DNTTZgQk5vZB58X7zVxWtbIBZg==",
   "success": true,
-  "projectFilePath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\Demo-unsecure-website-v1\\Server\\Server_v1\\Server_v1\\Server_v1.csproj",
+  "projectFilePath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\PracticalProject\\Server\\Server_v1\\Server_v1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dumi_\\.nuget\\packages\\microsoft.data.sqlite\\8.0.2\\microsoft.data.sqlite.8.0.2.nupkg.sha512",
     "C:\\Users\\dumi_\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.2\\microsoft.data.sqlite.core.8.0.2.nupkg.sha512",

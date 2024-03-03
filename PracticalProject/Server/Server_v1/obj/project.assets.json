@@ -744,11 +744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\Demo-unsecure-website-v1\\Server\\Server_v1\\Server_v1\\Server_v1.csproj",
+      "projectUniqueName": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\PracticalProject\\Server\\Server_v1\\Server_v1.csproj",
       "projectName": "Server_v1",
-      "projectPath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\Demo-unsecure-website-v1\\Server\\Server_v1\\Server_v1\\Server_v1.csproj",
+      "projectPath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\PracticalProject\\Server\\Server_v1\\Server_v1.csproj",
       "packagesPath": "C:\\Users\\dumi_\\.nuget\\packages\\",
-      "outputPath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\Demo-unsecure-website-v1\\Server\\Server_v1\\Server_v1\\obj\\",
+      "outputPath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\PracticalProject\\Server\\Server_v1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dumi_\\AppData\\Roaming\\NuGet\\NuGet.Config",
