@@ -5,16 +5,16 @@ function Login() {
   let [password, setPassword] = useState('');
 
   const loginFunc = () => {
-    try {
-      fetch('https://localhost:7234/Accounts', {
-        //method: "post",
-        headers: {
-          "accept": "text/plain"
-        },
-        //body: JSON.stringify(ob)
-      }).then(response => console.log(response))
-    }
-    catch (error) { console.error(error) };
+    fetch('https://localhost:7234/Accounts', {
+      //method: "post",
+      headers: {
+        Accept: "plain/text",
+        "Content-Type": "application/json",
+      },
+      //body: JSON.stringify(ob)
+    }).then(response => response.text())
+      .then(data => console.log(data))
+      .catch((err) => console.error(err));
   }
 
   return (
