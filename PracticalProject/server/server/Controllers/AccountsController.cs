@@ -39,14 +39,14 @@ namespace Server_v1.Controllers
         }
 
         [HttpPost(Name = "SignIn")]
-        public Boolean Post(Account a)
+        public Boolean Post([FromBody] Account account)
         {
             using (var connection = new SqliteConnection(DatabaseConnString))
             {
                 connection.Open();
 
                 var command = connection.CreateCommand();
-                command.CommandText = "SELECT Password FROM Accounts where Username = '" + a.username + "' and Password = '" + a.password + "'";
+                command.CommandText = "SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'";
 
                 using (var reader = command.ExecuteReader())
                 {
@@ -59,12 +59,5 @@ namespace Server_v1.Controllers
 
             return false;
         }
-        //destructive payload
-        /*        {
-          "id": 0,
-          "username": "a",
-          "password": "a' or 1=1--"
-        }*/
-
     }
 }
