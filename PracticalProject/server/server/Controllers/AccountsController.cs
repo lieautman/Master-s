@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Server_v1.ReadObjects;
 using Microsoft.Data.Sqlite;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Server_v1.Controllers
 {
@@ -38,8 +40,8 @@ namespace Server_v1.Controllers
             }
         }
 
-        [HttpPost(Name = "SignIn")]
-        public Boolean Post([FromBody] Account account)
+        [HttpPost("SignInLv1")]
+        public IActionResult SignInLv1([FromBody] Account account)
         {
             using (var connection = new SqliteConnection(DatabaseConnString))
             {
@@ -52,12 +54,55 @@ namespace Server_v1.Controllers
                 {
                     while (reader.Read())
                     {
-                        return true;
+                        return Ok(new { value = true });
+                    }
+                }
+            }
+            return Ok(new { value = false });
+        }
+
+        [HttpPost("SignInLv2")]
+        public IActionResult SignInLv2([FromBody] Account account)
+        {
+            using (var connection = new SqliteConnection(DatabaseConnString))
+            {
+                connection.Open();
+
+                SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'", connection);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return Ok(new { value=true });
+                    }
+                }
+            }
+            return Ok(new { value = false });
+        }
+
+        [HttpPost("SignInLv3")]
+        public IActionResult SignInLv3([FromBody] Account account)
+        {
+            using (var connection = new SqliteConnection(DatabaseConnString))
+            {
+                connection.Open();
+
+
+                SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = @username and Password = @password", connection);
+                cmd.Parameters.AddWithValue("@username", account.username);
+                cmd.Parameters.AddWithValue("@password", account.password);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return Ok(new { value=true });
                     }
                 }
             }
 
-            return false;
+            return Ok(new { value = false });
         }
     }
 }

@@ -1,8 +1,9 @@
 import 'react-tabs/style/react-tabs.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from 'react';
-import InsecureLoginLevelOne from '../LevelOneInsecureApp';
-import InsecureLoginLevelTwo from '../LevelTwoInsecureApp';
+import InsecureLoginLevel1 from '../Level1InsecureApp';
+import InsecureLoginLevel2 from '../Level2InsecureApp';
+import InsecureLoginLevel3 from '../Level3InsecureApp';
 
 function LevelsOfSecurity() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -15,11 +16,13 @@ function LevelsOfSecurity() {
         <TabList>
           <Tab>Lv.1 Insecure Login</Tab>
           <Tab>Lv.2 Insecure Login</Tab>
-          <Tab>Lv.3 Secure Login</Tab>
+          <Tab>Lv.3 Insecure Login</Tab>
+          <Tab>Lv.4 Secure Login</Tab>
         </TabList>
-        <TabPanel><InsecureLoginLevelOne></InsecureLoginLevelOne></TabPanel>
-        <TabPanel><InsecureLoginLevelTwo></InsecureLoginLevelTwo></TabPanel>
-        <TabPanel>Panel 3</TabPanel>
+        <TabPanel><InsecureLoginLevel1></InsecureLoginLevel1></TabPanel>
+        <TabPanel><InsecureLoginLevel2></InsecureLoginLevel2></TabPanel>
+        <TabPanel><InsecureLoginLevel3></InsecureLoginLevel3></TabPanel>
+        <TabPanel>Panel 4</TabPanel>
       </Tabs>
     </>
   );
