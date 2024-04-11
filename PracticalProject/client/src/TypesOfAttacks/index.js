@@ -11,10 +11,14 @@ function TypesOfAttacks() {
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
                     <Tab>SQL injections</Tab>
-                    <Tab>Attack2</Tab>
+                    <Tab>CORS attack</Tab>
+                    <Tab>Object Property Level Authorisation attack</Tab>
+                    <Tab>Server Side Request Forgery</Tab>
                 </TabList>
                 <TabPanel><SQLInjections></SQLInjections></TabPanel>
-                <TabPanel>Attack2</TabPanel>
+                <TabPanel>CORS attack</TabPanel>
+                <TabPanel>Object Property Level Authorisation attack</TabPanel>
+                <TabPanel>Server Side Request Forgery</TabPanel>
             </Tabs>
         </>
     );

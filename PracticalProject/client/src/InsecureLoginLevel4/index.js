@@ -8,7 +8,7 @@ function InsecureLoginLevel4() {
     return (
         <>
             <p>
-                {`To stop the previous attacks, we have to: filter the input given by the client. The server does this with the help of the database package in the "AddWithValue" procedure`}
+                {`The previous level removed the ability to inject SQL, but as another security measure, the passwords should not stay as they are inside the database. They shall be hashed with a salt. This can be done manually or can be integrated by a third patry authentification server provider.`}
             </p>
             <form>
                 <label>
