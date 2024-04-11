@@ -1,11 +1,12 @@
 import 'react-tabs/style/react-tabs.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from 'react';
-import InsecureLoginLevel1 from '../Level1InsecureApp';
-import InsecureLoginLevel2 from '../Level2InsecureApp';
-import InsecureLoginLevel3 from '../Level3InsecureApp';
+import InsecureLoginLevel1 from '../InsecureLoginLevel1';
+import InsecureLoginLevel2 from '../InsecureLoginLevel2';
+import InsecureLoginLevel3 from '../InsecureLoginLevel3';
+import InsecureLoginLevel4 from '../InsecureLoginLevel4';
 
-function LevelsOfSecurity() {
+function SQLInjections() {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
@@ -22,10 +23,10 @@ function LevelsOfSecurity() {
         <TabPanel><InsecureLoginLevel1></InsecureLoginLevel1></TabPanel>
         <TabPanel><InsecureLoginLevel2></InsecureLoginLevel2></TabPanel>
         <TabPanel><InsecureLoginLevel3></InsecureLoginLevel3></TabPanel>
-        <TabPanel>Panel 4</TabPanel>
+        <TabPanel><InsecureLoginLevel4></InsecureLoginLevel4></TabPanel>
       </Tabs>
     </>
   );
 }
 
-export default LevelsOfSecurity;
+export default SQLInjections;

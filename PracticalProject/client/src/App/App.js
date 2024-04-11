@@ -1,6 +1,6 @@
-import LevelsOfSecurity from "../LevelsOfSecurity";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TypesOfAttacks from "../TypesOfAttacks";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         pauseOnHover
         theme="light"
       />
-      <LevelsOfSecurity></LevelsOfSecurity>
+      <TypesOfAttacks></TypesOfAttacks>
     </>
   );
 }
