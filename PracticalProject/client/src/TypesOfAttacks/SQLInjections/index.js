@@ -1,10 +1,10 @@
 import 'react-tabs/style/react-tabs.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from 'react';
-import InsecureLoginLevel1 from '../InsecureLoginLevel1';
-import InsecureLoginLevel2 from '../InsecureLoginLevel2';
-import InsecureLoginLevel3 from '../InsecureLoginLevel3';
-import InsecureLoginLevel4 from '../InsecureLoginLevel4';
+import InsecureLoginLevel1 from './InsecureLoginLevel1';
+import InsecureLoginLevel2 from './InsecureLoginLevel2';
+import InsecureLoginLevel3 from './InsecureLoginLevel3';
+import InsecureLoginLevel4 from './InsecureLoginLevel4';
 
 function SQLInjections() {
   const [tabIndex, setTabIndex] = useState(0);
