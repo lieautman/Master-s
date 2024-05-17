@@ -1,6 +1,7 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TypesOfAttacks from "../TypesOfAttacks";
+import './App.css'
 
 function App() {
   return (
