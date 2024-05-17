@@ -2,6 +2,7 @@ import 'react-tabs/style/react-tabs.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from 'react';
 import SQLInjections from "./SQLInjections";
+import ObjectPropertyLevelAuthorisationAttack from "./ObjectPropertyLevelAuthorisationAttack";
 
 function TypesOfAttacks() {
     const [tabIndex, setTabIndex] = useState(0);
@@ -16,7 +17,7 @@ function TypesOfAttacks() {
                     <Tab>Server Side Request Forgery</Tab>
                 </TabList>
                 <TabPanel><SQLInjections></SQLInjections></TabPanel>
-                <TabPanel>Object Property Level Authorisation attack</TabPanel>
+                <TabPanel><ObjectPropertyLevelAuthorisationAttack></ObjectPropertyLevelAuthorisationAttack></TabPanel>
                 <TabPanel>CORS attack</TabPanel>
                 <TabPanel>Server Side Request Forgery</TabPanel>
             </Tabs>
