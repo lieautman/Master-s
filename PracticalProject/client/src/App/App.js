@@ -1,3 +1,4 @@
+import 'react-tabs/style/react-tabs.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TypesOfAttacks from "../TypesOfAttacks";

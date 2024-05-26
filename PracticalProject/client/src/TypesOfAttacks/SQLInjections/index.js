@@ -1,4 +1,3 @@
-import 'react-tabs/style/react-tabs.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from 'react';
 import InsecureLoginLevel1 from './InsecureLoginLevel1';

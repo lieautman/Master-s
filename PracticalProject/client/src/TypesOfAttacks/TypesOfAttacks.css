@@ -1,0 +1,11 @@
+.react-tabs__tab--selected{
+    background: rgba(146, 181, 233, 0.78);
+    border-radius: 6px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);
+    border: 1px solid rgba(43, 110, 209, 0.39);
+}
+.react-tabs__tab:focus:after{
+    height:0px
+}
