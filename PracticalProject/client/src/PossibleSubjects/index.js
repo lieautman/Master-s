@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getListOfSubjects } from '../Requests';
-import Grid from '@mui/material/Grid';
+import { Grid, Button, Typography } from '@mui/material';
 
 function PossibleSubjects({ setListOfAttacks }) {
     const [listOfSubjects, setListOfSubjects] = useState([]);
@@ -8,11 +8,12 @@ function PossibleSubjects({ setListOfAttacks }) {
     console.log("ceva", listOfSubjects)
     return (
         <>
-            {listOfSubjects.map(subject => <Grid container>
-                <Grid></Grid>
-            </Grid>)}
+            <Typography textAlign={"center"} color={'white'}>Select a language to receive security issues related to it:</Typography>
+            <Grid container spacing={2} width={"50vw"} >{listOfSubjects.map(subject =>
+                <Grid item xs={3} textAlign={"center"} style={{ padding: "50px" }}><Button variant="contained" size={"large"}>{subject.name}</Button></Grid>
+            )}
+            </Grid>
         </>
     );
 }
-
 export default PossibleSubjects;
