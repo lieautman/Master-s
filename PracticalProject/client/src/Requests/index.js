@@ -1,5 +1,15 @@
 import { toast } from 'react-toastify';
 
+export const getListOfSubjects = (setListOfSubjects) => {
+    fetch('https://localhost:7234/ListOfLanguages', {
+        headers: {
+            Accept: "plain/text",
+            "Content-Type": "application/json",
+        },
+    }).then(response => response.json())
+        .then(data => setListOfSubjects(data))
+        .catch((err) => console.error(err));
+}
 
 export const loginFuncLevel1 = (username, password) => {
     fetch('https://localhost:7234/Accounts/SignInLv1', {

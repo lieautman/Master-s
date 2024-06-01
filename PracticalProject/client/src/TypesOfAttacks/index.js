@@ -4,7 +4,7 @@ import SQLInjections from "./SQLInjections";
 import ObjectPropertyLevelAuthorisationAttack from "./ObjectPropertyLevelAuthorisationAttack";
 import './TypesOfAttacks.css'
 
-function TypesOfAttacks() {
+function TypesOfAttacks({listOfAttacks}) {
     const [tabIndex, setTabIndex] = useState(0);
 
     return (

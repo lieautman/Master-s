@@ -2,9 +2,12 @@ import 'react-tabs/style/react-tabs.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TypesOfAttacks from "../TypesOfAttacks";
+import PossibleSubjects from "../PossibleSubjects";
 import './App.css'
+import { useState } from 'react';
 
 function App() {
+  const [listOfAttacks, setListOfAttacks] = useState([]);
   return (
     <>
       <ToastContainer
@@ -19,7 +22,9 @@ function App() {
         pauseOnHover
         theme="light"
       />
-      <TypesOfAttacks></TypesOfAttacks>
+
+      {listOfAttacks.length === 0 ? <PossibleSubjects setListOfAttacks={setListOfAttacks} /> : <TypesOfAttacks listOfAttacks={listOfAttacks} />
+      }
     </>
   );
 }
