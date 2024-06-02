@@ -9,3 +9,7 @@
 .react-tabs__tab:focus:after{
     height:0px
 }
+
+button{
+    background-color: red;
+}

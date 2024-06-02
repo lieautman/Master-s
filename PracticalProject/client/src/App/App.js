@@ -23,7 +23,7 @@ function App() {
         theme="light"
       />
 
-      {listOfTopics.length === 0 ? <PossibleSubjects setListOfTopics={setListOfTopics} /> : <TypesOfAttacks listOfTopics={listOfTopics} />
+      {listOfTopics.length === 0 ? <PossibleSubjects setListOfTopics={setListOfTopics} /> : <TypesOfAttacks listOfTopics={listOfTopics} setListOfTopics={setListOfTopics}/>
       }
     </>
   );
