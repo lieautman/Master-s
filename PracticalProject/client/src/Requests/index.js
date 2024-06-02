@@ -33,6 +33,17 @@ export const getListOfLanguagesWithTags = (setListOfLanguagesWithTags) => {
         .catch((err) => console.error(err));
 }
 
+export const getListOfTopics = (setListOfTopics, languageWithTag) => {
+    fetch('https://localhost:7234/ListOfTopics/'+JSON.stringify(languageWithTag), {
+        headers: {
+            Accept: "plain/text",
+            "Content-Type": "application/json",
+        },
+    }).then(response => response.json())
+        .then(data => setListOfTopics(data))
+        .catch((err) => console.error(err));
+}
+
 
 export const loginFuncLevel1 = (username, password) => {
     fetch('https://localhost:7234/Accounts/SignInLv1', {

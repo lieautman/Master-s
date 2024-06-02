@@ -7,7 +7,7 @@ import './App.css'
 import { useState } from 'react';
 
 function App() {
-  const [listOfAttacks, setListOfAttacks] = useState([]);
+  const [listOfTopics, setListOfTopics] = useState([]);
   return (
     <>
       <ToastContainer
@@ -23,7 +23,7 @@ function App() {
         theme="light"
       />
 
-      {listOfAttacks.length === 0 ? <PossibleSubjects setListOfAttacks={setListOfAttacks} /> : <TypesOfAttacks listOfAttacks={listOfAttacks} />
+      {listOfTopics.length === 0 ? <PossibleSubjects setListOfTopics={setListOfTopics} /> : <TypesOfAttacks listOfTopics={listOfTopics} />
       }
     </>
   );

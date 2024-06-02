@@ -55,3 +55,4 @@ D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\se
 D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\server\obj\Debug\net8.0\server.pdb
 D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\server\obj\Debug\net8.0\server.genruntimeconfig.cache
 D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\server\obj\Debug\net8.0\ref\server.dll
+D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\server\bin\Debug\net8.0\Newtonsoft.Json.dll

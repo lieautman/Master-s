@@ -4,9 +4,9 @@ import SQLInjections from "./SQLInjections";
 import ObjectPropertyLevelAuthorisationAttack from "./ObjectPropertyLevelAuthorisationAttack";
 import './TypesOfAttacks.css'
 
-function TypesOfAttacks({listOfAttacks}) {
+function TypesOfAttacks({listOfTopics}) {
     const [tabIndex, setTabIndex] = useState(0);
-
+    console.log("ceva", listOfTopics)
     return (
         <>
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>

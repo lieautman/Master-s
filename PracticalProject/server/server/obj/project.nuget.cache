@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wCv/uA1A4dR7lj+wgyHpTjlTFh6LtSY18sGXny8RWpSVGZAbV9weLyjKIL4w4FBDHok30XTNzXck0fztkGTuXA==",
+  "dgSpecHash": "n91zwnj3sDOS9QJP2QXFeaOU6unOBUX9jGT9DXOHb6YAb/ixprETp1Cz/y2mcyeuX7EOEZa1rMIxsdu+ufpTlQ==",
   "success": true,
   "projectFilePath": "D:\\AllFiles\\University\\Dissertatie\\DisertatieDocument\\PracticalProject\\server\\server\\server.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\dumi_\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.2\\microsoft.data.sqlite.core.8.0.2.nupkg.sha512",
     "C:\\Users\\dumi_\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\dumi_\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\dumi_\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\dumi_\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\dumi_\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\dumi_\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
