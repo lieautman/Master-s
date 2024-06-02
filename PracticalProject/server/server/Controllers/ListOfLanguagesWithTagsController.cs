@@ -12,7 +12,7 @@ namespace Server_v1.Controllers
     {
         const string DatabaseConnString = "Data Source=../../database/db_v1.db";
 
-        [HttpGet(Name = "GetListOfSubjects")]
+        [HttpGet(Name = "GetListOfLanguages")]
         public IEnumerable<Language> Get()
         {
             using (var connection = new SqliteConnection(DatabaseConnString))

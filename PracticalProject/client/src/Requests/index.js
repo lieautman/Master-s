@@ -1,15 +1,38 @@
 import { toast } from 'react-toastify';
 
-export const getListOfSubjects = (setListOfSubjects) => {
+export const getListOfLanguages = (setListOfLanguages) => {
     fetch('https://localhost:7234/ListOfLanguages', {
         headers: {
             Accept: "plain/text",
             "Content-Type": "application/json",
         },
     }).then(response => response.json())
-        .then(data => setListOfSubjects(data))
+        .then(data => setListOfLanguages(data))
         .catch((err) => console.error(err));
 }
+
+export const getListOfTags = (setListOfTags) => {
+    fetch('https://localhost:7234/ListOfTags', {
+        headers: {
+            Accept: "plain/text",
+            "Content-Type": "application/json",
+        },
+    }).then(response => response.json())
+        .then(data => setListOfTags(data))
+        .catch((err) => console.error(err));
+}
+
+export const getListOfLanguagesWithTags = (setListOfLanguagesWithTags) => {
+    fetch('https://localhost:7234/ListOfLanguagesWithTags', {
+        headers: {
+            Accept: "plain/text",
+            "Content-Type": "application/json",
+        },
+    }).then(response => response.json())
+        .then(data => setListOfLanguagesWithTags(data))
+        .catch((err) => console.error(err));
+}
+
 
 export const loginFuncLevel1 = (username, password) => {
     fetch('https://localhost:7234/Accounts/SignInLv1', {

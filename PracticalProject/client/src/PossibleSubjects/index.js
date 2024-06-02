@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
-import { getListOfSubjects } from '../Requests';
-import { Grid, Button, Typography } from '@mui/material';
+import { getListOfLanguagesWithTags } from '../Requests';
+import { Grid, Button, Typography, Tooltip } from '@mui/material';
 
 function PossibleSubjects({ setListOfAttacks }) {
-    const [listOfSubjects, setListOfSubjects] = useState([]);
-    useEffect(() => getListOfSubjects(setListOfSubjects), []);
-    console.log("ceva", listOfSubjects)
+    const [listOfLanguagesWithTags, setListOfLanguagesWithTags] = useState([]);
+    useEffect(() => getListOfLanguagesWithTags(setListOfLanguagesWithTags), []);
+    console.log("ceva", listOfLanguagesWithTags)
     return (
         <>
             <Typography textAlign={"center"} color={'white'}>Select a language to receive security issues related to it:</Typography>
-            <Grid container spacing={2} width={"50vw"} >{listOfSubjects.map(subject =>
-                <Grid item xs={3} textAlign={"center"} style={{ padding: "50px" }}><Button variant="contained" size={"large"}>{subject.name}</Button></Grid>
+            <Grid container spacing={2} width={"50vw"} >{listOfLanguagesWithTags.map(languageWithTag =>
+                <Grid item xs={3} textAlign={"center"} style={{ padding: "50px" }} key={languageWithTag.id}>
+                    <Tooltip title={languageWithTag.tags.length !== 0 ? "Tags: " + languageWithTag.tags.map(element => element.name
+                    ).join(", ") : ""}><Button variant="contained" size={"large"}>{languageWithTag.name} </Button>
+                    </Tooltip>
+                </Grid>
             )}
             </Grid>
         </>
