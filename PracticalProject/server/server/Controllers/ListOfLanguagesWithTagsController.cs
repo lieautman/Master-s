@@ -49,7 +49,7 @@ namespace Server_v1.Controllers
                     {
                         while (reader2.Read())
                         {
-                            var tagId = Int32.Parse(reader2.GetString(0));
+                            var tagId = Int32.Parse(reader2.GetString(2));
 
                             listOfTagId.Add(tagId);
                         }

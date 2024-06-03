@@ -7,20 +7,25 @@ import './TypesOfAttacks.css'
 
 function TypesOfAttacks({ listOfTopics, setListOfTopics }) {
     const [tabIndex, setTabIndex] = useState(0);
-    console.log("ceva", listOfTopics)
+    const hasSqlInjection = listOfTopics.some(x=>x.name==="SqlInjection"||x.name==="all")
+    const hasObjectPropertyLevelAuthorisation = listOfTopics.some(x=>x.name==="ObjectPropertyLevelAuthorisation"||x.name==="all")
+    const hasCorsAttack = listOfTopics.some(x=>x.name==="CorsAttack"||x.name==="all")
+    const hasServerSideRequestForgery = listOfTopics.some(x=>x.name==="ServerSideRequestForgery"||x.name==="all")
+
+
     return (
         <>
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
-                    <Tab>SQL injections</Tab>
-                    <Tab>Object Property Level Authorisation attack</Tab>
-                    <Tab>CORS attack</Tab>
-                    <Tab>Server Side Request Forgery</Tab>
+                    {hasSqlInjection?<Tab>SQL injections</Tab>:<></>}
+                    {hasObjectPropertyLevelAuthorisation?<Tab>Object Property Level Authorisation attack</Tab>:<></>}
+                    {hasCorsAttack?<Tab>CORS attack</Tab>:<></>}
+                    {hasServerSideRequestForgery?<Tab>Server Side Request Forgery</Tab>:<></>}
                 </TabList>
-                <TabPanel><SQLInjections></SQLInjections></TabPanel>
-                <TabPanel><ObjectPropertyLevelAuthorisationAttack></ObjectPropertyLevelAuthorisationAttack></TabPanel>
-                <TabPanel>CORS attack</TabPanel>
-                <TabPanel>Server Side Request Forgery</TabPanel>
+                {hasSqlInjection?<TabPanel><SQLInjections></SQLInjections></TabPanel>:<></>}
+                {hasObjectPropertyLevelAuthorisation?<TabPanel><ObjectPropertyLevelAuthorisationAttack></ObjectPropertyLevelAuthorisationAttack></TabPanel>:<></>}
+                {hasCorsAttack?<TabPanel>CORS attack</TabPanel>:<></>}
+                {hasServerSideRequestForgery?<TabPanel>Server Side Request Forgery</TabPanel>:<></>}
             </Tabs>
             <Button style={{float:"right", margin:"20px"}} variant="contained" onClick={() => setListOfTopics([])}>Back to list</Button>
 

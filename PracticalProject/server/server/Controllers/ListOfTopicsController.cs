@@ -37,7 +37,7 @@ namespace Server_v1.Controllers
                     {
                         while (reader.Read())
                         {
-                            var id = Int32.Parse(reader.GetString(0));
+                            var id = Int32.Parse(reader.GetString(1));
 
                             topicIdSet.Add(id);
                         }
