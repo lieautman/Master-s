@@ -21,5 +21,6 @@ html {
     -webkit-backdrop-filter: blur(3.9px);
     border: 1px solid rgba(43, 110, 209, 0.39);
     display: inline;
+    width: 50vw;
 }
 button{background-color: red;}
