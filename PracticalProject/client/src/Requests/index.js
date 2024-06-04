@@ -45,7 +45,7 @@ export const getListOfTopics = (setListOfTopics, languageWithTag) => {
 }
 
 //SQLInjection
-export const loginFuncLevel1 = (username, password) => {
+export const SQLInjectionFuncLevel1 = (username, password) => {
     fetch('https://localhost:7234/SqlInjection/Level1', {
         method: "POST",
         headers: {
@@ -62,7 +62,7 @@ export const loginFuncLevel1 = (username, password) => {
         .catch((err) => console.error(err));
 }
 
-export const loginFuncLevel2 = (username, password) => {
+export const SQLInjectionFuncLevel2 = (username, password) => {
     fetch('https://localhost:7234/SqlInjection/Level2', {
         method: "POST",
         headers: {
@@ -79,7 +79,7 @@ export const loginFuncLevel2 = (username, password) => {
         .catch((err) => console.error(err));
 }
 
-export const loginFuncLevel3 = (username, password) => {
+export const SQLInjectionFuncLevel3 = (username, password) => {
     fetch('https://localhost:7234/SqlInjection/Level3', {
         method: "POST",
         headers: {
@@ -92,6 +92,28 @@ export const loginFuncLevel3 = (username, password) => {
                 toast("Login Succesfull");
             else
                 toast("Login Unuccesfull");
+        })
+        .catch((err) => console.error(err));
+}
+
+//ObjectPropertyLevelAuthorisationAttack
+export const ObjectPropertyLevelAuthorisationAttackLevel1 = (setProducst) => {
+    fetch('https://localhost:7234/ObjectPropertyLevelAuthorisationAttack/Level1', {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            setProducst(data)
+            console.log(data)
+        })
+        .catch((err) => console.error(err));
+}
+export const ObjectPropertyLevelAuthorisationAttackLevel2 = (setProducst) => {
+    fetch('https://localhost:7234/ObjectPropertyLevelAuthorisationAttack/Level2', {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            setProducst(data)
+            console.log(data)
         })
         .catch((err) => console.error(err));
 }

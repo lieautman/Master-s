@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { loginFuncLevel1 } from '../../../Requests/index';
+import { SQLInjectionFuncLevel1 } from '../../../Requests/index';
 
 
 function InsecureLoginLevel1() {
@@ -20,7 +20,7 @@ function InsecureLoginLevel1() {
           Password:
           <input type="password" onChange={(event) => setPassword(event.target.value)} />
         </label>
-        <input type="button" value="Login" onClick={() => { loginFuncLevel1(username, password) }} />
+        <input type="button" value="Login" onClick={() => { SQLInjectionFuncLevel1(username, password) }} />
       </form>
       <p>
         {`The distructive payload can be used in postman or as input for each field in the form.`}

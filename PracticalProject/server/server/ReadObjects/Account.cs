@@ -1,23 +1,23 @@
 ﻿namespace Server_v1.ReadObjects
 {
-    public class Account
+    public class Product
     {
         public int id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
+        public string productName { get; set; }
+        public Person person { get; set; }
 
-        public Account()
+        public Product()
         {
             this.id = 0;
-            this.username = "";
-            this.password = "";
+            this.productName = "";
+            this.person = new Person();
         }
 
-        public Account(int id, string username, string password)
+        public Product(int id, string productName, Person person)
         {
             this.id = id;
-            this.username = username;
-            this.password = password;
+            this.productName = productName;
+            this.person = person;
         }
     }
 }

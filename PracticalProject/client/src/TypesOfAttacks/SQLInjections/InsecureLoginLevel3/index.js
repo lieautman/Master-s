@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { loginFuncLevel3 } from '../../../Requests/index';
+import { SQLInjectionFuncLevel3 } from '../../../Requests/index';
 
 
 function InsecureLoginLevel3() {
@@ -20,7 +20,7 @@ function InsecureLoginLevel3() {
                     Password:
                     <input type="password" onChange={(event) => setPassword(event.target.value)} />
                 </label>
-                <input type="button" value="Login" onClick={() => { loginFuncLevel3(username, password) }} />
+                <input type="button" value="Login" onClick={() => { SQLInjectionFuncLevel3(username, password) }} />
             </form>
             <p>
                 {`destructive payload: { "id": 0, "username": "a", "password": "a' or 1=1--" } 
