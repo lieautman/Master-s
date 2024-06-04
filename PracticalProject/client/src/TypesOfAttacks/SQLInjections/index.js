@@ -10,8 +10,9 @@ function SQLInjections() {
 
   return (
     <>
-      <p>{`As for any other security measure, there are layers of security to an api. 
-      These may allow bad actors to either destroy data, gather data, or even impersonate other users.`}</p>
+      <p>{"Threat description:"}</p>
+      <p>{`The SQL injection is one of the most basic security issues an application may have.
+      It is caused by impropper checks of the requests given to an API server, which cause impropper database queries.`}</p>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab>Lv.1 Insecure Login</Tab>

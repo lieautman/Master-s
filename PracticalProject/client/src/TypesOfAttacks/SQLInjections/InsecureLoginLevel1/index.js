@@ -8,6 +8,9 @@ function InsecureLoginLevel1() {
 
   return (
     <>
+      <p>
+        {`Underneath, there is a vulnerable form that can be exploited with SQL injection:`}
+      </p>
       <form>
         <label>
           Username:
@@ -20,11 +23,13 @@ function InsecureLoginLevel1() {
         <input type="button" value="Login" onClick={() => { loginFuncLevel1(username, password) }} />
       </form>
       <p>
-        {`destructive payload: { "id": 0, "username": "a", "password": "a' or 1=1--" } 
-        can also talk about the damage that this sort of payload can do (remove the database)`}
+        {`The distructive payload can be used in postman or as input for each field in the form.`}
       </p>
-      <p>Backend code:</p>
-      <code>command.CommandText = "SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'";</code><br/>
+      <p>
+        {`Destructive payload: { "id": 0, "username": "a", "password": "a' or 1=1--" }`}
+      </p>
+      <p>{`Backend code: SQLInjectionController.cs -> Level1`}</p>
+      <code>command.CommandText = "SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'";</code><br />
     </>
   );
 }

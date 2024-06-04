@@ -8,40 +8,12 @@ namespace Server_v1.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AccountsController : ControllerBase
+    public class SqlInjectionController : ControllerBase
     {
         const string DatabaseConnString = "Data Source=../../database/db_v1.db";
 
-        [HttpGet(Name = "GetAccounts")]
-        public IEnumerable<Account> Get()
-        {
-            using (var connection = new SqliteConnection(DatabaseConnString))
-            {
-                connection.Open();
-
-                var command = connection.CreateCommand();
-                command.CommandText = "SELECT * FROM Accounts";
-
-                List<Account> list = new List<Account>();
-
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        var id = Int32.Parse(reader.GetString(0));
-                        var username = reader.GetString(1);
-                        var password = reader.GetString(2);
-
-                        Account a = new Account(id, username, password);
-                        list.Add(a);
-                    }
-                }
-                return list;
-            }
-        }
-
-        [HttpPost("SignInLv1")]
-        public IActionResult SignInLv1([FromBody] Account account)
+        [HttpPost("Level1")]
+        public IActionResult Level1([FromBody] Account account)
         {
             using (var connection = new SqliteConnection(DatabaseConnString))
             {
@@ -61,8 +33,8 @@ namespace Server_v1.Controllers
             return Ok(new { value = false });
         }
 
-        [HttpPost("SignInLv2")]
-        public IActionResult SignInLv2([FromBody] Account account)
+        [HttpPost("Level2")]
+        public IActionResult Level2([FromBody] Account account)
         {
             using (var connection = new SqliteConnection(DatabaseConnString))
             {
@@ -81,8 +53,8 @@ namespace Server_v1.Controllers
             return Ok(new { value = false });
         }
 
-        [HttpPost("SignInLv3")]
-        public IActionResult SignInLv3([FromBody] Account account)
+        [HttpPost("Level3")]
+        public IActionResult Level3([FromBody] Account account)
         {
             using (var connection = new SqliteConnection(DatabaseConnString))
             {

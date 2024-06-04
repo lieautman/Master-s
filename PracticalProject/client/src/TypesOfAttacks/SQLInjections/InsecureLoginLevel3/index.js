@@ -9,7 +9,7 @@ function InsecureLoginLevel3() {
     return (
         <>
             <p>
-                {`To stop the previous attacks, we have to: filter the input given by the client. The server does this with the help of the database package in the "AddWithValue" procedure`}
+                {`To stop the previous attacks, we have to: filter the input given by the client. The server does this with the help of the database package in the "AddWithValue" procedure:`}
             </p>
             <form>
                 <label>

@@ -44,9 +44,9 @@ export const getListOfTopics = (setListOfTopics, languageWithTag) => {
         .catch((err) => console.error(err));
 }
 
-
+//SQLInjection
 export const loginFuncLevel1 = (username, password) => {
-    fetch('https://localhost:7234/Accounts/SignInLv1', {
+    fetch('https://localhost:7234/SqlInjection/Level1', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export const loginFuncLevel1 = (username, password) => {
 }
 
 export const loginFuncLevel2 = (username, password) => {
-    fetch('https://localhost:7234/Accounts/SignInLv2', {
+    fetch('https://localhost:7234/SqlInjection/Level2', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export const loginFuncLevel2 = (username, password) => {
 }
 
 export const loginFuncLevel3 = (username, password) => {
-    fetch('https://localhost:7234/Accounts/SignInLv3', {
+    fetch('https://localhost:7234/SqlInjection/Level3', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -93,16 +93,5 @@ export const loginFuncLevel3 = (username, password) => {
             else
                 toast("Login Unuccesfull");
         })
-        .catch((err) => console.error(err));
-}
-
-export const getAccounts = () => {
-    fetch('https://localhost:7234/Accounts', {
-        headers: {
-            Accept: "plain/text",
-            "Content-Type": "application/json",
-        },
-    }).then(response => response.text())
-        .then(data => console.log(data))
         .catch((err) => console.error(err));
 }

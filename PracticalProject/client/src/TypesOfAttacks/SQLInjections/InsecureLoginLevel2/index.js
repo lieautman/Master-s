@@ -8,6 +8,10 @@ function InsecureLoginLevel2() {
 
     return (
         <>
+            <p>
+                {`To solve the issue from level1, one may think that a library may help,
+                 but the same problem can happen if instead of inputing through the library, we do it through strings.`}
+            </p>
             <form>
                 <label>
                     Username:
@@ -24,7 +28,7 @@ function InsecureLoginLevel2() {
                 can also talk about the damage that this sort of payload can do (remove the database)`}
             </p>
             <p>Backend code:</p>
-            <code>SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'", connection);</code><br/>
+            <code>SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'", connection);</code><br />
         </>
     );
 }
