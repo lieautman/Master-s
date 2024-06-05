@@ -21,6 +21,29 @@ html {
     -webkit-backdrop-filter: blur(3.9px);
     border: 1px solid rgba(43, 110, 209, 0.39);
     display: inline;
-    width: 50vw;
+    width: 70vw;
+    height: 70vh;
+    overflow: scroll;
+    overflow-x: hidden;
 }
-button{background-color: red;}
+
+pre {
+    background: #6998d2;
+    border: 1px solid #2d1e85;
+    border-left: 3px solid #0b2835;
+    color: #000000;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+button {
+    background-color: red;
+}

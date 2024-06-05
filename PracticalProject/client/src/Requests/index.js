@@ -117,3 +117,24 @@ export const ObjectPropertyLevelAuthorisationAttackLevel2 = (setProducst) => {
         })
         .catch((err) => console.error(err));
 }
+
+//ServerSideRequestForgery
+export const ServerSideRequestForgeryLevel1 = (setData, fileName) => {
+    fetch(`https://localhost:7234/ServerSideRequestForgery/Level1/${fileName}`, {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            setData(data.fileContent)
+        })
+        .catch((err) => console.error(err));
+}
+
+export const ServerSideRequestForgeryLevel2 = (setData, fileName) => {
+    fetch(`https://localhost:7234/ServerSideRequestForgery/Level2/${fileName}`, {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            setData(data.fileContent)
+        })
+        .catch((err) => console.error(err));
+}
