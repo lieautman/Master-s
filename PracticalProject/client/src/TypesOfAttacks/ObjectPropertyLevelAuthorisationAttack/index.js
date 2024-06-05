@@ -8,6 +8,7 @@ function ObjectPropertyLevelAuthorisationAttack() {
 
   return (
     <>
+      <p>{"Threat description:"}</p>
       <p>{`This attack is based on if the attacker has access to more data then intended.`}</p>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>

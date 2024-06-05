@@ -15,11 +15,11 @@ function SecureDataLoading() {
                 <Grid item xs={5}>Product name</Grid>
                 <Grid item xs={5}>Publisher name</Grid>
                 {products.map(product => {
-                    return <div key={product.id}>
+                    return <Grid container item key={product.id}>
                         <Grid item xs={2}>{product.id}</Grid>
                         <Grid item xs={5}>{product.productName}</Grid>
                         <Grid item xs={5}>{product.person.name}</Grid>
-                    </div>
+                    </Grid>
                 })}
             </Grid >
 

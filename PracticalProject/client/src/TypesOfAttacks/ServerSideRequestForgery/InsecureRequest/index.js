@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ObjectPropertyLevelAuthorisationAttackLevel1 } from '../../../Requests';
 import { Grid } from '@mui/material';
 
-function InsecureDataLoading() {
+function InsecureRequest() {
     const [products, setProducst] = useState([])
     useEffect(() => { ObjectPropertyLevelAuthorisationAttackLevel1(setProducst) }, [])
     return (
@@ -46,4 +46,4 @@ function InsecureDataLoading() {
     );
 }
 
-export default InsecureDataLoading;
+export default InsecureRequest;
