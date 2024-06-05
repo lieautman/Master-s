@@ -25,7 +25,7 @@ function SecureDataLoading() {
 
 
             <p>{`Backend code: ObjectPropertyLevelAuthorisationAttackController.cs -> Level2`}</p>
-            <code>
+            <pre>
                 {`Person p1 = new Person();
             p1.id = 1;
             p1.name= "a";
@@ -38,7 +38,7 @@ function SecureDataLoading() {
 
             List<Product> products = new List<Product> { pr1, pr2 };
             return products;`}
-            </code><br />
+            </pre><br />
         </>
     );
 }

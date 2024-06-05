@@ -28,7 +28,8 @@ function InsecureLoginLevel2() {
                 can also talk about the damage that this sort of payload can do (remove the database)`}
             </p>
             <p>Backend code:</p>
-            <code>SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'", connection);</code><br />
+            <pre>{`SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = '" + account.username + "'
+             and Password = '" + account.password + "'", connection);`}</pre><br />
         </>
     );
 }

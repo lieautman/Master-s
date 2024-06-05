@@ -29,7 +29,8 @@ function InsecureLoginLevel1() {
         {`Destructive payload: { "id": 0, "username": "a", "password": "a' or 1=1--" }`}
       </p>
       <p>{`Backend code: SQLInjectionController.cs -> Level1`}</p>
-      <code>command.CommandText = "SELECT Password FROM Accounts where Username = '" + account.username + "' and Password = '" + account.password + "'";</code><br />
+      <pre>{`command.CommandText = "SELECT Password FROM Accounts where Username = '" + account.username + "'
+       and Password = '" + account.password + "'";`}</pre><br />
     </>
   );
 }

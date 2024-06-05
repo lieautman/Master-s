@@ -27,9 +27,9 @@ function InsecureLoginLevel3() {
         can also talk about the damage that this sort of payload can do (remove the database)`}
             </p>
             <p>Backend code:</p>
-            <code>SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = @username and Password = @password", connection);</code><br/>
-            <code>cmd.Parameters.AddWithValue("@username", account.username);</code><br/>
-            <code>cmd.Parameters.AddWithValue("@password", account.password);</code><br/>
+            <pre>{`SqliteCommand cmd = new SqliteCommand("SELECT Password FROM Accounts where Username = @username and Password = @password", connection);
+            cmd.Parameters.AddWithValue("@username", account.username);
+            cmd.Parameters.AddWithValue("@password", account.password);`}</pre><br/>
         </>
     );
 }

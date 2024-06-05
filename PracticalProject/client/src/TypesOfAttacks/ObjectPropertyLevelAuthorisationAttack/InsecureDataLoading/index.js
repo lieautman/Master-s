@@ -32,7 +32,7 @@ function InsecureDataLoading() {
             a supposed attacker to gather information.
             This information can now be used to perform further attacks.`}</p>
             <p>{`Backend code: ObjectPropertyLevelAuthorisationAttackController.cs -> Level1`}</p>
-            <code>
+            <pre>
                 {`Person p1 = new Person(1, "a", "0123");
                 Person p2 = new Person(2, "b", "01234");
 
@@ -41,7 +41,7 @@ function InsecureDataLoading() {
 
                 List<Product> products = new List<Product> {pr1, pr2};
                     return products;`}
-            </code><br />
+            </pre><br />
         </>
     );
 }

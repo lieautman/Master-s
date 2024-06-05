@@ -25,11 +25,26 @@ html {
     height: 70vh;
     overflow: scroll;
     overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 pre {
     background: #6998d2;
-    border: 1px solid #2d1e85;
+    border: 1px solid #4e4e4e;
     border-left: 3px solid #0b2835;
     color: #000000;
     page-break-inside: avoid;
