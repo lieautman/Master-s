@@ -59,6 +59,8 @@ pre {
     word-wrap: break-word;
 }
 
-button {
-    background-color: red;
+input{
+    background-color: #6998d2;
+    border: 1px solid #4e4e4e;
+    border-radius: 8px;
 }
