@@ -4,6 +4,8 @@ import InsecureLoginLevel1 from './InsecureLoginLevel1';
 import InsecureLoginLevel2 from './InsecureLoginLevel2';
 import InsecureLoginLevel3 from './InsecureLoginLevel3';
 import InsecureLoginLevel4 from './InsecureLoginLevel4';
+import { Button } from '@mui/material';
+
 
 function SQLInjections() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -13,6 +15,8 @@ function SQLInjections() {
       <p>{"Threat description:"}</p>
       <p>{`The SQL injection is one of the most basic security issues an application may have.
       It is caused by impropper checks of the requests given to an API server, which cause impropper database queries.`}</p>
+      <p>{`Postmand website link: `} <a href='https://www.postman.com/' target="_blank" rel="noreferrer" >{`Postman website`}</a></p>
+      <p>{`Postman import file: `} <Button variant="contained" href="SQL_injections_postman.json" download="SQL_injections_postman.json"> {` Download postman file`} </Button></p>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab>Lv.1 Insecure Login</Tab>

@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "7083ce6d-c240-455f-ab40-26f6237bf158",
+		"name": "Dissertation SQL injections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24638344"
+	},
+	"item": [
+		{
+			"name": "SQLInjectionLevel1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 0, \"username\": \"a\", \"password\": \"a' or 1=1--\" }"
+				},
+				"url": {
+					"raw": "https://localhost:7234/SqlInjection/Level1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"SqlInjection",
+						"Level1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SQLInjectionLevel2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 0, \"username\": \"a\", \"password\": \"a' or 1=1--\" }"
+				},
+				"url": {
+					"raw": "https://localhost:7234/SqlInjection/Level2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"SqlInjection",
+						"Level2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SQLInjectionLevel3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 0, \"username\": \"a\", \"password\": \"a' or 1=1--\" }"
+				},
+				"url": {
+					"raw": "https://localhost:7234/SqlInjection/Level3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"SqlInjection",
+						"Level3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -25,7 +25,7 @@ namespace Server_v1.Controllers
 
                 return Ok(new { fileContent = fileContent });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Ok(new { fileContent = "" }); ;
             }
@@ -64,7 +64,7 @@ namespace Server_v1.Controllers
 
                 return Ok(new { fileContent = fileContent });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Ok(new { fileContent = "" }); ;
             }

@@ -3,6 +3,7 @@ using Server_v1.ReadObjects;
 using Microsoft.Data.Sqlite;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.StaticFiles;
 
 namespace Server_v1.Controllers
 {

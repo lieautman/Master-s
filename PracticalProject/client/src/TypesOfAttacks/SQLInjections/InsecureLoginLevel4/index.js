@@ -1,9 +1,4 @@
-import { useState } from 'react';
-import { loginFuncLevel3 } from '../../../Requests/index';
-
 function InsecureLoginLevel4() {
-    let [username, setUsername] = useState('');
-    let [password, setPassword] = useState('');
 
     return (
         <>
