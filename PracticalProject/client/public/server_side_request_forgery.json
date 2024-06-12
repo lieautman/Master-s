@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d1950756-677e-4a37-a26d-3bc55200a063",
+		"name": "Dissertation server side request forgery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24638344"
+	},
+	"item": [
+		{
+			"name": "InsecureRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7234/ServerSideRequestForgery/Level1/text1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"ServerSideRequestForgery",
+						"Level1",
+						"text1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsecureRequest2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7234/ServerSideRequestForgery/Level1/text2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"ServerSideRequestForgery",
+						"Level1",
+						"text2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SecureRequest1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7234/ServerSideRequestForgery/Level1/text1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"ServerSideRequestForgery",
+						"Level1",
+						"text1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SecureRequest2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7234/ServerSideRequestForgery/Level2/text2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"ServerSideRequestForgery",
+						"Level2",
+						"text2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
