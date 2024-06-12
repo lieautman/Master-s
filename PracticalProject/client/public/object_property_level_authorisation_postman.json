@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "3d326e0a-5424-4574-8d71-c6510a80f7d3",
+		"name": "Dissertation object property level authorisation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24638344"
+	},
+	"item": [
+		{
+			"name": "InsecureDataLoading",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 0, \"username\": \"a\", \"password\": \"a' or 1=1--\" }"
+				},
+				"url": {
+					"raw": "https://localhost:7234/ObjectPropertyLevelAuthorisationAttack/Level1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"ObjectPropertyLevelAuthorisationAttack",
+						"Level1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SecureDataLoading",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 0, \"username\": \"a\", \"password\": \"a' or 1=1--\" }"
+				},
+				"url": {
+					"raw": "https://localhost:7234/ObjectPropertyLevelAuthorisationAttack/Level2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7234",
+					"path": [
+						"ObjectPropertyLevelAuthorisationAttack",
+						"Level2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
