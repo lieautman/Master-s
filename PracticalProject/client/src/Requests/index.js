@@ -145,7 +145,7 @@ export const BufferOverflowLevel1 = (setData, name) => {
         method: "GET",
     }).then(response => response.json())
         .then(data => {
-            console.log("ceva", data)
+            setData(data.value)
         })
         .catch((err) => console.error(err));
 }

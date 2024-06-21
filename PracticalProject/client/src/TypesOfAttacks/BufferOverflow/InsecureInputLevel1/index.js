@@ -3,7 +3,7 @@ import { BufferOverflowLevel1 } from '../../../Requests/index';
 
 function InsecureInputLevel1() {
   let [name, setName] = useState('');
-
+  let [returnValue, setReturnValue] = useState();
   return (
     <>
       <p>
@@ -14,10 +14,11 @@ function InsecureInputLevel1() {
           Name:
           <input type="text" onChange={(event) => setName(event.target.value)} />
         </label>
-        <input type="button" value="Login" onClick={() => { BufferOverflowLevel1(()=>{},name) }} />
+        <input type="button" value="Login" onClick={() => { BufferOverflowLevel1(setReturnValue,name) }} />
       </form>
+      <p>{`Return value is: ` + returnValue}</p>
       <p>
-        {`The input: "zzzzzzzzzzzzzzzzz" can be used for the application to throw the wrong output, by overwriting the isAdmin variable`}
+        {`The input: "zzzzzzzzzzzzzzzzz" can be used for the application to throw the wrong output, by overwriting the isAdmin variable. The return value of 1 should never be reached according to the code.`}
       </p>
     </>
   );
