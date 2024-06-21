@@ -138,3 +138,24 @@ export const ServerSideRequestForgeryLevel2 = (setData, fileName) => {
         })
         .catch((err) => console.error(err));
 }
+
+//BufferOverflow
+export const BufferOverflowLevel1 = (setData, name) => {
+    fetch(`https://localhost:7234/BufferOverflow/Level1/${name}`, {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            console.log("ceva", data)
+        })
+        .catch((err) => console.error(err));
+}
+
+export const BufferOverflowLevel2 = (setData, name) => {
+    fetch(`https://localhost:7234/BufferOverflow/Level2/${name}`, {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            console.log("ceva", data)
+        })
+        .catch((err) => console.error(err));
+}
