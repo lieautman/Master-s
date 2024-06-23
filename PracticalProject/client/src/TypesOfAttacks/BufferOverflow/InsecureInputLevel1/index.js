@@ -7,7 +7,7 @@ function InsecureInputLevel1() {
   return (
     <>
       <p>
-        {`Underneath, there is a vulnerable form that can be exploited with Buffer overflow being sent to a c++ application:`}
+        {`Underneath, there is a vulnerable form that can be exploited with Buffer overflow by being sent to a c++ application:`}
       </p>
       <form>
         <label>
