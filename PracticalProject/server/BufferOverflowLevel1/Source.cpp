@@ -2,10 +2,10 @@
 #include <string.h>
 
 int main(int argc, char** argv) {
-	char input[10];
+	char input[10]{};
 	int isAdmin = 0;
 
-	strcpy(input, argv[1]);
+	strncpy(input, argv[1],9);
 	printf("isAdmin:%d\n", isAdmin);
 
 	if (isAdmin) {

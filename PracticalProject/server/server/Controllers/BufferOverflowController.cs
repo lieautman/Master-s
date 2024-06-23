@@ -20,7 +20,11 @@ namespace Server_v1.Controllers
         [HttpGet("Level2/{name}")]
         public IActionResult Level2(string name)
         {
-            return Ok(new { value = false });
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            Process P = System.Diagnostics.Process.Start(path + "../../../../x64/Debug/BufferOverflowLevel2.exe", name);
+            P.WaitForExit();
+            int result = P.ExitCode;
+            return Ok(new { value = result });
         }
     }
 }

@@ -14,11 +14,14 @@ function InsecureInputLevel1() {
           Name:
           <input type="text" onChange={(event) => setName(event.target.value)} />
         </label>
-        <input type="button" value="Login" onClick={() => { BufferOverflowLevel1(setReturnValue,name) }} />
+        <input type="button" value="Send" onClick={() => { BufferOverflowLevel1(setReturnValue,name) }} />
       </form>
+      <p>
+        {`The returned value sould always be 1 and the backedn console will display "Hello {your input}!"`}
+      </p>
       <p>{`Return value is: ` + returnValue}</p>
       <p>
-        {`The input: "zzzzzzzzzzzzzzzzz" can be used for the application to throw the wrong output, by overwriting the isAdmin variable. The return value of 1 should never be reached according to the code.`}
+        {`The input: "zzzzzzzzzzzzzzzzz" can be used for the application to throw the wrong output (returns 1), by overwriting the isAdmin variable. The return value of 1 should never be reached according to the code.`}
       </p>
     </>
   );

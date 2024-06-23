@@ -1,2 +1,2 @@
 ﻿  Source.cpp
-  BufferOverflowLevel1.vcxproj -> D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\x64\Debug\BufferOverflowLevel1.exe
+D:\AllFiles\University\Dissertatie\DisertatieDocument\PracticalProject\server\BufferOverflowLevel1\Source.cpp(5,16): error C2143: syntax error: missing ';' before '{'
