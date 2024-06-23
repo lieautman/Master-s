@@ -1,6 +1,5 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from 'react';
-import { Button } from '@mui/material';
 import InsecureInputLevel1 from "./InsecureInputLevel1"
 import SecureInputLevel2 from "./SecureInputLevel2"
 

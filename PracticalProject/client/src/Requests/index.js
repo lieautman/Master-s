@@ -155,6 +155,27 @@ export const BufferOverflowLevel2 = (setData, name) => {
         method: "GET",
     }).then(response => response.json())
         .then(data => {
+            setData(data.value)
+        })
+        .catch((err) => console.error(err));
+}
+
+//MemoryLeak
+export const MemoryLeakLevel1 = () => {
+    fetch(`https://localhost:7234/MemoryLeak/Level1`, {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
+            console.log("ceva", data)
+        })
+        .catch((err) => console.error(err));
+}
+
+export const MemoryLeakLevel2 = () => {
+    fetch(`https://localhost:7234/MemoryLeak/Level2`, {
+        method: "GET",
+    }).then(response => response.json())
+        .then(data => {
             console.log("ceva", data)
         })
         .catch((err) => console.error(err));
