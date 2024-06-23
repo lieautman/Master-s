@@ -5,6 +5,7 @@ import SQLInjections from "./SQLInjections";
 import ObjectPropertyLevelAuthorisationAttack from "./ObjectPropertyLevelAuthorisationAttack";
 import ServerSideRequestForgery from "./ServerSideRequestForgery";
 import BufferOverflow from "./BufferOverflow";
+import MemoryLeak from "./MemoryLeak";
 import './TypesOfAttacks.css'
 
 function TypesOfAttacks({ listOfTopics, setListOfTopics }) {
@@ -33,7 +34,7 @@ function TypesOfAttacks({ listOfTopics, setListOfTopics }) {
                 {hasCorsAttack?<TabPanel>CORS attack</TabPanel>:<></>}
                 {hasServerSideRequestForgery?<TabPanel><ServerSideRequestForgery></ServerSideRequestForgery></TabPanel>:<></>}
                 {hasBufferOverflow?<TabPanel><BufferOverflow></BufferOverflow></TabPanel>:<></>}
-                {hasMemodyLeaks?<TabPanel>Memory Leaks</TabPanel>:<></>}
+                {hasMemodyLeaks?<TabPanel><MemoryLeak></MemoryLeak></TabPanel>:<></>}
             </Tabs>
             <Button style={{float:"right", margin:"20px"}} variant="contained" onClick={() => setListOfTopics([])}>Back to list</Button>
 

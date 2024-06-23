@@ -4,16 +4,13 @@ import { Button } from '@mui/material';
 import InsecureInputLevel1 from "./InsecureInputLevel1"
 import SecureInputLevel2 from "./SecureInputLevel2"
 
-function SQLInjections() {
+function BufferOverflow() {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
     <>
       <p>{"Threat description:"}</p>
-      <p>{`The SQL injection is one of the most basic security issues an application may have.
-      It is caused by impropper checks of the requests given to an API server, which cause impropper database queries.`}</p>
-      <p>{`Postmand website link: `} <a href='https://www.postman.com/' target="_blank" rel="noreferrer" >{`Postman website`}</a></p>
-      <p>{`Postman import file: `} <Button variant="contained" href="SQL_injections_postman.json" download="SQL_injections_postman.json"> {` Download postman file`} </Button></p>
+      <p>{`A buffer overflow problem is caused when a memory unsafe method is called. Theese methods may allow an attacker to overwrite process memory, changing variable or process flow.`}</p>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab>Lv.1 Insecure input</Tab>
@@ -26,4 +23,4 @@ function SQLInjections() {
   );
 }
 
-export default SQLInjections;
+export default BufferOverflow;
