@@ -14,6 +14,10 @@ function InsecureInputLevel1() {
 }
 printf("Finished process!");
 return 1;`}</pre><br />
+      <p>
+        {`The server machine memory after request:`}
+      </p>
+      <img src="MemoryLeakLevel1SystemMemoryUseage.png"></img>
     </>
   );
 }

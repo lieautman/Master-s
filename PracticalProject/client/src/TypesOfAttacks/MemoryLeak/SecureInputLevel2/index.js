@@ -4,7 +4,7 @@ function SecureInputLevel2() {
   return (
     <>
       <p>
-      {`The objects now get deallocated, thus the application does not take too much memory.`}
+        {`The objects now get deallocated, thus the application does not take too much memory.`}
       </p>
       <form>
         <input type="button" value="Send request" onClick={() => { MemoryLeakLevel2() }} />
@@ -15,6 +15,10 @@ function SecureInputLevel2() {
 	}
 	printf("Finished process!");
 	return 1;`}</pre><br />
+      <p>
+        {`The server machine memory after request:`}
+      </p>
+      <img src="MemoryLeakLevel2SystemMemoryUseage.png"></img>
     </>
   );
 }
