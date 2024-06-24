@@ -18,7 +18,7 @@ function SecureInputLevel2() {
       <p>
         {`The server machine memory after request:`}
       </p>
-      <img src="MemoryLeakLevel2SystemMemoryUseage.png"></img>
+      <img src="MemoryLeakLevel2SystemMemoryUseage.png" alt="Depicts low memory useage"></img>
     </>
   );
 }

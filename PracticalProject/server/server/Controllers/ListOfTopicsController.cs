@@ -22,7 +22,7 @@ namespace Server_v1.Controllers
                 return new List<Topic>();
 
 
-            HashSet<int> topicIdSet = new HashSet<int>();
+            HashSet<int> topicIdSet = [];
             foreach (var tag in tags)
             {
                 using (var connection = new SqliteConnection(DatabaseConnString))
@@ -37,15 +37,15 @@ namespace Server_v1.Controllers
                     {
                         while (reader.Read())
                         {
-                            var id = Int32.Parse(reader.GetString(1));
+                            var topicId = Int32.Parse(reader.GetString(1));
 
-                            topicIdSet.Add(id);
+                            topicIdSet.Add(topicId);
                         }
                     }
                 }
             }
 
-            List<Topic> topicList = new List<Topic>();
+            List<Topic> topicList = [];
             foreach (var topicId in topicIdSet)
             {
                 using (var connection = new SqliteConnection(DatabaseConnString))

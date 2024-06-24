@@ -17,7 +17,7 @@ return 1;`}</pre><br />
       <p>
         {`The server machine memory after request:`}
       </p>
-      <img src="MemoryLeakLevel1SystemMemoryUseage.png"></img>
+      <img src="MemoryLeakLevel1SystemMemoryUseage.png"  alt="Depicts high memory useage"></img>
     </>
   );
 }
