@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\BufferOverflowLevel1\Source.cpp">
+    <ClCompile Include="..\BufferOverflowLevel1\SourceBufferOverflowLevel2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
