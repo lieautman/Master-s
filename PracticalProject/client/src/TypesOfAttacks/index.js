@@ -6,6 +6,7 @@ import ObjectPropertyLevelAuthorisationAttack from "./ObjectPropertyLevelAuthori
 import ServerSideRequestForgery from "./ServerSideRequestForgery";
 import BufferOverflow from "./BufferOverflow";
 import MemoryLeak from "./MemoryLeak";
+import CorsAttack from "./CorsAttack";
 import './TypesOfAttacks.css'
 
 function TypesOfAttacks({ listOfTopics, setListOfTopics }) {
@@ -31,7 +32,7 @@ function TypesOfAttacks({ listOfTopics, setListOfTopics }) {
                 </TabList>
                 {hasSqlInjection?<TabPanel><SQLInjections></SQLInjections></TabPanel>:<></>}
                 {hasObjectPropertyLevelAuthorisation?<TabPanel><ObjectPropertyLevelAuthorisationAttack></ObjectPropertyLevelAuthorisationAttack></TabPanel>:<></>}
-                {hasCorsAttack?<TabPanel>CORS attack</TabPanel>:<></>}
+                {hasCorsAttack?<TabPanel><CorsAttack></CorsAttack></TabPanel>:<></>}
                 {hasServerSideRequestForgery?<TabPanel><ServerSideRequestForgery></ServerSideRequestForgery></TabPanel>:<></>}
                 {hasBufferOverflow?<TabPanel><BufferOverflow></BufferOverflow></TabPanel>:<></>}
                 {hasMemodyLeaks?<TabPanel><MemoryLeak></MemoryLeak></TabPanel>:<></>}
