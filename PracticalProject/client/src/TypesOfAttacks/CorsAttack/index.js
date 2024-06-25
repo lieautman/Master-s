@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
 function CorsAttack() {
-  const [tabIndex, setTabIndex] = useState(0);
-
   return (
     <>
       <p>{"Threat description:"}</p>
